@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pablo Ibañez</title>
+
+<!-- Google Font elegante -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Playfair Display', serif;
+    overflow:hidden;
+}
+
+/* Layout dividido */
+.container{
+    display:flex;
+    height:100vh;
+}
+
+/* Lado izquierdo */
+.left{
+    width:50%;
+    background:#f3f3f3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:80px;
+}
+
+/* Texto grande */
+.projects{
+    font-size:64px;
+    line-height:1.1;
+    color:#000;
+}
+
+.projects span{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.projects span:hover{
+    color:#e10600; /* rojo editorial */
+}
+
+/* Lado derecho imagen */
+.right{
+    width:50%;
+    background-size:cover;
+    background-position:center;
+    transition:0.5s ease;
+}
+
+/* Header minimal arriba */
+header{
+    position:fixed;
+    top:30px;
+    width:100%;
+    text-align:center;
+    font-size:18px;
+    letter-spacing:3px;
+}
+
+.subtitle{
+    font-size:12px;
+    letter-spacing:4px;
+    margin-top:5px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    PABLO IBAÑEZ
+    <div class="subtitle">DESIGN</div>
+</header>
+
+<div class="container">
+
+    <div class="left">
+        <div class="projects">
+            <span data-img="img1.jpg">Elle</span> /
+            <span data-img="img2.jpg">Miguel</span> /
+            <span data-img="img3.jpg">Magic</span> /
+            <span data-img="img4.jpg">Harper's Bazaar</span> /
+            <span data-img="img5.jpg">Vogue</span>
+        </div>
+    </div>
+
+    <div class="right" id="imageSide"></div>
+
+</div>
+
+<script>
+
+const rightSide = document.getElementById("imageSide");
+const items = document.querySelectorAll(".projects span");
+
+items.forEach(item=>{
+    item.addEventListener("mouseenter",()=>{
+        const img = item.getAttribute("data-img");
+        rightSide.style.backgroundImage = `url('${img}')`;
+    });
+});
+
+</script>
+
+</body>
+</html>
