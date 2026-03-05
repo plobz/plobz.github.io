@@ -1,74 +1,77 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
 body {
-  font-family: 'Arial Black', sans-serif;
-  background: black;
+  background: #2e5ecf;
   color: white;
+  font-family: 'Playfair Display', serif;
   overflow: hidden;
 }
 
-/* VIDEO */
-.bg-video {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  z-index: -2;
-}
-
-/* OVERLAY OSCURO */
-.overlay {
-  position: fixed;
+/* Barra superior */
+.top-bar {
+  position: absolute;
+  top: 20px;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: -1;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  z-index: 10;
 }
 
-/* CONTENEDOR */
-.container {
-  height: 100vh;
+/* TITULO ABSURDAMENTE GRANDE */
+.hero {
+  position: absolute;
+  top: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 25vw;
+  line-height: 0.75;
+  text-align: center;
+  z-index: 1;
+  mix-blend-mode: lighten;
+}
+
+/* IMAGEN GIGANTE */
+.image-container {
+  position: absolute;
+  bottom: -10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;
+  z-index: 2;
+}
+
+.image-container img {
+  width: 100%;
+}
+
+/* MENU INFERIOR */
+.menu {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  padding-left: 5vw;
+  gap: 60px;
+  z-index: 10;
 }
 
-/* TITULO GIGANTE */
-.hero-title {
-  font-size: 18vw;
-  line-height: 0.8;
-  color: red;
-  letter-spacing: -5px;
-}
-
-/* BOTONES */
-.buttons {
-  margin-top: 40px;
-  display: flex;
-  gap: 30px;
-}
-
-.btn {
+.menu a {
   text-decoration: none;
   color: white;
-  font-size: 1rem;
+  font-size: 14px;
   letter-spacing: 2px;
-  border-bottom: 2px solid white;
+  border-bottom: 1px solid white;
   padding-bottom: 5px;
   transition: 0.3s ease;
 }
 
-.btn:hover {
-  color: red;
-  border-color: red;
+.menu a:hover {
+  opacity: 0.5;
 }
