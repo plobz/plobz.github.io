@@ -30,11 +30,12 @@ body {
   top: 5vh;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 35vw;
-  line-height: 0.75;
+  font-family: 'Anton', sans-serif;
+  font-size: 38vw;
+  line-height: 0.8;
+  letter-spacing: -0.5vw;
   text-align: center;
   z-index: 1;
-  mix-blend-mode: lighten;
 }
 
 /* IMAGEN GIGANTE */
