@@ -2,6 +2,8 @@ const cursorImage = document.getElementById("cursor-image");
 
 const projects = document.querySelectorAll(".project");
 
+if(cursorImage){
+
 projects.forEach(project => {
 
 project.addEventListener("mouseenter", () => {
@@ -27,3 +29,5 @@ cursorImage.style.left = e.clientX + "px";
 cursorImage.style.top = e.clientY + "px";
 
 });
+
+}
